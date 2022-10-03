@@ -10,10 +10,16 @@
  * @return {boolean}
  */
 var isPalindrome = function (head) {
-    for (var i = 0; i <= head.length / 2; i++) {
-        if (head[i] !== head[head.length - 1 - i]) {
+    var arr = [];
+    while (head) {
+        arr.push(head.val);
+        head = head.next;
+    }
+    for (var i = 0; i < Math.floor(arr.length / 2); i++) {
+        if (arr[i] !== arr[arr.length - 1 - i]) {
             return false;
         }
     }
     return true;
-}   
+}
+
