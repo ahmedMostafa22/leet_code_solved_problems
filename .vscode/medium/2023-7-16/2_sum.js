@@ -27,6 +27,4 @@ var twoSum = function (numbers, target) {
         var bSRes = binarySearch(numbers, target - numbers[i], i + 1, numbers.length - 1);
         if (bSRes !== -1 && bSRes !== i) return [i + 1, bSRes + 1].sort((a, b) => a - b);
     }
-};
-
-// console.log(binarySearch([1, 1000], 1000, 0, 1));
+}; 
